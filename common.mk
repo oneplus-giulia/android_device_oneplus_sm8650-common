@@ -234,6 +234,26 @@ $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.oplus
 
+# Logging
+SPAMMY_LOG_TAGS := \
+    OplusTouchDaemon \
+    vendor.qti.bluetooth@1.1-wake_lock \
+    vendor.qti.bluetooth@1.1-ibs_handler \
+    IRIS_LOG_SERV_I7 \
+    SDM \
+    synaLib \
+    CwbService \
+    occe_create \
+    DisplayModeController \
+    StatsLog \
+    android.hardware.power-service-qti \
+    vendor.qti.vibrator
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
+endif
+
 # Media
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
