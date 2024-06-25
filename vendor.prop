@@ -233,6 +233,7 @@ vendor.gatekeeper.is_security_level_spu=0
 debug.egl.hw=0
 debug.sf.auto_latch_unsignaled=1
 debug.sf.disable_client_composition_cache=0
+debug.sf.enable_transaction_tracing=false
 debug.sf.early.app.duration=13666666
 debug.sf.earlyGl.app.duration=13666666
 debug.sf.earlyGl.sf.duration=10500000
