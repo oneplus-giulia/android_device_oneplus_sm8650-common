@@ -43,8 +43,8 @@ function configure_zram_parameters() {
 	let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
 
 	# use MB avoid 32 bit overflow
-	if [ $zRamSizeMB -gt 6144 ]; then
-		let zRamSizeMB=6144
+	if [ $zRamSizeMB -gt 8192 ]; then
+		let zRamSizeMB=8192
 	fi
 
 	# And enable lz4 zram compression for Go targets.
