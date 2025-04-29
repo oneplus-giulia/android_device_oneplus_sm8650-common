@@ -300,6 +300,8 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//hardware/oplus:power-ext-oplus)
+
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_vendor # Needed by CNE app
