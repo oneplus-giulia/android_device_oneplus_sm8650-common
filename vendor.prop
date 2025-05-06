@@ -267,6 +267,8 @@ ro.surface_flinger.support_kernel_idle_timer=true
 # HWUI
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
 debug.sf.enable_adpf_cpu_hint=true
 
 # IMS
