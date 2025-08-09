@@ -100,6 +100,11 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us 1000
     write /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us 1000
 
+    # Kernel tuning
+    write /proc/sys/walt/sched_conservative_pl 1
+    write /proc/sys/kernel/sched_pelt_multiplier 2
+    write /proc/sys/kernel/sched_schedstats 0
+
     # Setup uclamp max limits
     write /dev/cpuctl/foreground/cpu.uclamp.max 80
     write /dev/cpuctl/background/cpu.uclamp.max 60
