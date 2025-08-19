@@ -114,6 +114,14 @@ PRODUCT_COPY_FILES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.heapstartsize=16m \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.5 \
+    dalvik.vm.heapminfree=8m \
+    dalvik.vm.heapmaxfree=32m
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
