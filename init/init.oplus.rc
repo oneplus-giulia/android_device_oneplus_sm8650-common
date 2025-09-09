@@ -105,6 +105,10 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuctl/background/cpu.uclamp.max 60
     write /dev/cpuctl/system-background/cpu.uclamp.max 40
 
+    # CPUSet
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
+
 service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     user system
     group system
